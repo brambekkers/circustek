@@ -7,7 +7,7 @@
 				class="form-control"
 				placeholder="Search..."
 				v-model="text"
-				:input="$emit('searchText', text)"
+				@input="$emit('searchText', text)"
 			/>
 			<div class="input-group-append">
 				<div class="input-group-text">
@@ -20,10 +20,14 @@
 
 <script>
 	export default {
+		props: ["defaultText"],
 		data() {
 			return {
 				text: ""
 			};
+		},
+		mounted() {
+			this.text = this.defaultText;
 		}
 	};
 </script>

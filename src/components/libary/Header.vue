@@ -1,22 +1,18 @@
 <template>
 	<section
-		class="container text-center bg-white p-2 p-md-3 p-xl-5 mb-2  mb-lg-4 border-bottom d-flex flex-column align-items-center justify-content-center"
+		class="container text-center bg-white p-2 p-md-3 p-xl-5 mb-2 mb-lg-4 border-bottom d-flex flex-column align-items-center justify-content-center"
 	>
 		<h1 class="title fw-bolder mb-3 mt-2">HMC CircuStek</h1>
+
 		<p class="lead text-muted">
-			In de circulaire winkel van het HMC kun je verschillende materialen
-			reserveren die door regionale bedrijven zijn geleverd. Besteld materiaal
-			blijft {{ reservationExpireDays }} dagen gereserveerd. Zorg ervoor dat je
-			binnen deze {{ reservationExpireDays }} dagen het materiaal afrekent en
-			ophaalt in de reguliere winkel. Als je interesse hebt in de bedrijven die
-			het materiaal leveren, kun je dit terug lezen in de database.
+			In het circulaire gedeelte van de Houtstek kun je verschillende materialen reserveren die door regionale bedrijven zijn gedoneerd.
+			Besteld materiaal blijft {{ reservationExpireDays }} dagen gereserveerd. Zorg ervoor dat je binnen deze {{ reservationExpireDays }} dagen het materiaal afrekent en ophaalt in de Houtstek. Als je interesse hebt in de bedrijven die het materiaal leveren, kun je dit teruglezen in de database.
 		</p>
 		<router-link
 			v-if="user"
 			to="/profile"
 			class="btn btn-primary my-2 d-none d-lg-block"
-			>Mijn reserveringen</router-link
-		>
+		>Mijn reserveringen</router-link>
 	</section>
 </template>
 

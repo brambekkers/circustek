@@ -2,21 +2,26 @@ import QRCode from "qrcode";
 
 export default {
     state: {
+        materialSearchTekst: '',
         materials: null,
         sheetMaterials: []
     },
     getters: {
         materials: (s) => s.materials,
-        sheetMaterials: (s) => s.sheetMaterials
+        sheetMaterials: (s) => s.sheetMaterials,
+        materialSearchTekst: (s) => s.materialSearchTekst
     },
     mutations: {
-        unit({}, string) {
+        unit({ }, string) {
             if (string) {
                 const unit = string.split(" ")[1];
                 if (unit === "deel") return "delen";
                 return unit;
             }
             return "eenheden";
+        },
+        materialSearchTekst(state, val) {
+            state.materialSearchTekst = val;
         }
     },
     actions: {
@@ -99,7 +104,7 @@ export default {
                 }
             });
         },
-        createQRcode({}, id) {
+        createQRcode({ }, id) {
             return new Promise(async (resolve, reject) => {
                 try {
                     const options = {
