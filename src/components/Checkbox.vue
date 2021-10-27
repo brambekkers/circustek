@@ -1,12 +1,7 @@
 <template>
 	<div class="form-check text-start">
 		<label class="form-check-label">
-			<input
-				class="form-check-input"
-				type="checkbox"
-				:checked="check"
-				@click="setCheck"
-			/>
+			<input class="form-check-input" type="checkbox" :checked="check" @click="setCheck" />
 
 			<span class="form-check-sign">
 				<transition name="fade">
@@ -14,7 +9,7 @@
 				</transition>
 			</span>
 			Ik accepteer
-			<router-link :to="link">de voorwaarde</router-link>.
+			<router-link :to="link" target="_blank">de voorwaarden</router-link>.
 		</label>
 	</div>
 </template>

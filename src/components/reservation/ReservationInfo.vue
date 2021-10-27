@@ -6,9 +6,9 @@
 			</div>
 			<div class="description">
 				<h5 class="info-title">Goedkoop</h5>
-				<p class="description">
-					Het materiaal wordt voor een lager bedrag dan dan marktwaarde verkocht. Hierdoor krijgt dit restmateriaal een tweede kans.
-				</p>
+				<p
+					class="description"
+				>Het materiaal wordt voor een lager bedrag dan de marktwaarde verkocht. Hierdoor krijgt dit restmateriaal een tweede kans.</p>
 			</div>
 		</div>
 		<div class="info-area info-horizontal">
@@ -17,9 +17,9 @@
 			</div>
 			<div class="description">
 				<h5 class="info-title">Reserveren voor de toekomst</h5>
-				<p class="description">
-					Wanneer je een reservering maakt wordt het materiaal tot maximaal 6 weken voor je apart gehouden.
-				</p>
+				<p
+					class="description"
+				>Wanneer je een reservering maakt wordt het materiaal tot maximaal 10 dagen voor je apart gehouden. Heb je andere plannen, neem dan contact op met Jacinta van Veen (j.vanveen@hmcollege.nl) of Sjors van der Voort (s.vandervoort@hmcollege.nl)</p>
 			</div>
 		</div>
 		<div class="info-area info-horizontal">
@@ -27,10 +27,10 @@
 				<i class="fas fa-shopping-cart"></i>
 			</div>
 			<div class="description">
-				<h5 class="info-title">Afname verplichting</h5>
-				<p class="description">
-					Wanneer je een materiaal reserveerd ga je een afnamen verplichting aan. Wanneer je het materiaal hebt afgerekend in de houtstek kun je het ophalen bij het servicepunt.
-				</p>
+				<h5 class="info-title">Afnameverplichting</h5>
+				<p
+					class="description"
+				>Wanneer je een materiaal reserveert, dan ga je een afnameverplichting aan en nadat je het materiaal hebt afgerekend in de Houtstek kun je het ophalen in de Circustek.</p>
 			</div>
 		</div>
 	</div>

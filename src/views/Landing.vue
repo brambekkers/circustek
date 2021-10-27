@@ -37,8 +37,8 @@
 			</p>
 			<p class="mb-5">
 				Meer info:
-				<A href="mailto:j.vanveen@hmcollege.nl">Jacinta van Veen</A>,
-				<A href="mailto:s.vandervoort@hmcollege.nl">Sjors van der Voort</A>
+				<a href="mailto:j.vanveen@hmcollege.nl">Jacinta van Veen</a>,
+				<a href="mailto:s.vandervoort@hmcollege.nl">Sjors van der Voort</a>
 			</p>
 		</section>
 	</div>

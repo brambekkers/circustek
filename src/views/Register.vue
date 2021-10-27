@@ -11,28 +11,19 @@
 								<div class="wizard-navigation">
 									<ul class="nav nav-pills d-flex">
 										<li class="nav-item" :class="{ active: step === 1 }">
-											<a
-												class="nav-link"
-												@click="step = maxStep >= 1 ? 1 : step"
-											>
+											<a class="nav-link" @click="step = maxStep >= 1 ? 1 : step">
 												<i class="fas fa-user"></i>
 												Profiel
 											</a>
 										</li>
 										<li class="nav-item" :class="{ active: step === 2 }">
-											<a
-												class="nav-link"
-												@click="step = maxStep >= 2 ? 2 : step"
-											>
+											<a class="nav-link" @click="step = maxStep >= 2 ? 2 : step">
 												<i class="fas fa-school"></i>
 												School
 											</a>
 										</li>
 										<li class="nav-item" :class="{ active: step === 3 }">
-											<a
-												class="nav-link"
-												@click="step = maxStep >= 3 ? 3 : step"
-											>
+											<a class="nav-link" @click="step = maxStep >= 3 ? 3 : step">
 												<i class="fas fa-lock"></i>
 												Beveiliging
 											</a>
@@ -45,9 +36,7 @@
 									<!-- Step 1 -->
 									<div class="tab-pane active" v-if="step === 1">
 										<form @submit.prevent="next()">
-											<h5 class="info-text mt-0">
-												Laten we beginnen met wat algemene gegevens
-											</h5>
+											<h5 class="info-text mt-0">Laten we beginnen met wat algemene gegevens</h5>
 											<div class="row justify-content-center">
 												<div class="col-10">
 													<div class="input-group">
@@ -84,12 +73,7 @@
 																<i class="far fa-envelope"></i>
 															</span>
 														</div>
-														<input
-															type="email"
-															placeholder="Email"
-															class="form-control"
-															v-model="newUser.email"
-														/>
+														<input type="email" placeholder="Email" class="form-control" v-model="newUser.email" />
 													</div>
 												</div>
 											</div>
@@ -98,18 +82,14 @@
 													type="submit"
 													class="btn btn-next btn-fill btn-rose btn-wd valid"
 													v-if="step < 3"
-												>
-													Volgende
-												</button>
+												>Volgende</button>
 											</div>
 										</form>
 									</div>
 									<!-- Step 2 -->
 									<div class="tab-pane active" v-show="step === 2">
 										<form @submit.prevent="next()">
-											<h5 class="info-text">
-												nu wat gegevens over de school
-											</h5>
+											<h5 class="info-text">nu wat gegevens over de school</h5>
 											<div class="row justify-content-center">
 												<div class="col-10">
 													<div class="form-group mt-4">
@@ -125,23 +105,15 @@
 																required
 																title="Type"
 															>
-																<option value="student" selected>
-																	Student
-																</option>
-																<option value="teacher">
-																	Docent
-																</option>
+																<option value="student" selected>Student</option>
+																<option value="teacher">Docent</option>
 															</select>
 														</div>
-														<label v-if="newUser.type === 'teacher'"
-															><b>Let op:</b> Om je als docent te registeren heb
-															je een docenten HMC-adresemail nodig.</label
-														>
+														<label v-if="newUser.type === 'teacher'">
+															<b>Let op:</b> Ben je een docent aan het HMC en wil je je registreren, dan heb je je e-mailadres van het HMC nodig.
+														</label>
 													</div>
-													<div
-														class="form-group mt-4"
-														v-if="newUser.type === 'student'"
-													>
+													<div class="form-group mt-4" v-if="newUser.type === 'student'">
 														<div class="input-group mb-0">
 															<div class="input-group-prepend">
 																<span class="input-group-text pe-2">
@@ -156,16 +128,13 @@
 																v-model.number="newUser.studentNumber"
 															/>
 														</div>
-														<label
-															><b>Let op:</b> Controleer je studentennummer
+														<label>
+															<b>Let op:</b> Controleer je studentennummer
 															goed! Zonder geldig studentennummer kun je geen
-															materiaal aanschaffen.</label
-														>
+															materiaal aanschaffen.
+														</label>
 													</div>
-													<div
-														class="input-group"
-														v-if="newUser.type === 'student'"
-													>
+													<div class="input-group" v-if="newUser.type === 'student'">
 														<div class="input-group-prepend">
 															<span class="input-group-text pe-2">
 																<i class="fas fa-graduation-cap"></i>
@@ -181,74 +150,38 @@
 													</div>
 
 													<div class="form-group mt-2">
-														<label v-if="newUser.type === 'student'"
-															>Welke opleiding volg je?</label
-														>
-														<label v-if="newUser.type === 'teacher'"
-															>Voor welke opleiding werk je?</label
-														>
+														<label v-if="newUser.type === 'student'">Welke opleiding volg je?</label>
+														<label v-if="newUser.type === 'teacher'">Voor welke opleiding werk je?</label>
 														<select
 															class="form-select form-control border-input show-tick"
 															v-model="newUser.study"
 															required
 															title="Opleiding"
 														>
-															<option
-																class="bs-title-option"
-																:value="''"
-																hidden
-															>
-																Selecteer...
-															</option>
-															<option value="Meubel">
-																Meubel
-															</option>
-															<option value="Interieur">
-																Interieur
-															</option>
-															<option value="Creatief">
-																Creatief
-															</option>
-															<option value="Stofferen">
-																Stofferen
-															</option>
-															<option value="Werkvoorbereiding">
-																Werkvoorbereiding
-															</option>
-															<option value="Werkvoorbereiding">
-																Technisch leidinggevende
-															</option>
-															<option value="Overige">
-																Overige
-															</option>
+															<option class="bs-title-option" :value="''" hidden>Selecteer...</option>
+															<option value="Meubel">Meubel</option>
+															<option value="Interieur">Interieur</option>
+															<option value="Creatief">Creatief</option>
+															<option value="Stofferen">Stofferen</option>
+															<option value="Werkvoorbereiding">Werkvoorbereiding</option>
+															<option value="Werkvoorbereiding">Technisch leidinggevende</option>
+															<option value="Overige">Overige</option>
 														</select>
 													</div>
 												</div>
 											</div>
 											<div class="float-end mt-5">
-												<button
-													type="submit"
-													class="btn btn-next btn-fill btn-rose btn-wd valid"
-												>
-													Volgende
-												</button>
+												<button type="submit" class="btn btn-next btn-fill btn-rose btn-wd valid">Volgende</button>
 											</div>
 											<div class="float-start mt-5">
-												<button
-													class="btn btn-next btn-fill btn-rose btn-wd valid"
-													@click="step--"
-												>
-													Vorige
-												</button>
+												<button class="btn btn-next btn-fill btn-rose btn-wd valid" @click="step--">Vorige</button>
 											</div>
 										</form>
 									</div>
 									<!-- Step 3 -->
 									<div class="tab-pane active" v-show="step === 3">
 										<form @submit.prevent="addUser()">
-											<h5 class="info-text mt-0">
-												Tot slot de Beveiliging van jouw account
-											</h5>
+											<h5 class="info-text mt-0">Tot slot de beveiliging van jouw account</h5>
 
 											<div class="row justify-content-center">
 												<div class="col-10">
@@ -281,29 +214,15 @@
 														/>
 													</div>
 
-													<Checkbox
-														class="mt-5"
-														@toggleCheck="setCheck"
-														:link="'/privacy'"
-													/>
+													<Checkbox class="mt-5" @toggleCheck="setCheck" :link="'/termsandconditions'" />
 												</div>
 											</div>
 
 											<div class="float-end mt-5">
-												<button
-													type="submit"
-													class="btn btn-next btn-fill btn-rose btn-wd valid"
-												>
-													Klaar
-												</button>
+												<button type="submit" class="btn btn-next btn-fill btn-rose btn-wd valid">Klaar</button>
 											</div>
 											<div class="float-start mt-5">
-												<button
-													class="btn btn-next btn-fill btn-rose btn-wd valid"
-													@click="step--"
-												>
-													Vorige
-												</button>
+												<button class="btn btn-next btn-fill btn-rose btn-wd valid" @click="step--">Vorige</button>
 											</div>
 										</form>
 									</div>

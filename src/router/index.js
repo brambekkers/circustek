@@ -15,6 +15,8 @@ import Profile from "../views/Profile.vue";
 import Mission from "../views/Mission.vue";
 import Donate from "../views/Donate.vue";
 import About from "../views/About.vue";
+import Privacy from "../views/Privacy.vue";
+import TermsAndConditions from "../views/TermsAndConditions.vue";
 
 // Dashboard pages
 import Dashboard from "../views/dashboard/Dashboard.vue";
@@ -121,6 +123,26 @@ const routes = [
         path: "/mission",
         name: "Onze missie",
         component: Mission,
+        meta: {
+            transitionEnter: "animated slideInRight",
+            transitionLeave: "animated slideOutLeft",
+            template: "front"
+        }
+    },
+    {
+        path: "/privacy",
+        name: "Privacy statement",
+        component: Privacy,
+        meta: {
+            transitionEnter: "animated slideInRight",
+            transitionLeave: "animated slideOutLeft",
+            template: "front"
+        }
+    },
+    {
+        path: "/termsAndConditions",
+        name: "Onze voorwaarden",
+        component: TermsAndConditions,
         meta: {
             transitionEnter: "animated slideInRight",
             transitionLeave: "animated slideOutLeft",

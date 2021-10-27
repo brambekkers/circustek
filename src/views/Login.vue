@@ -2,19 +2,20 @@
 	<div class="login">
 		<div class="background"></div>
 		<div class="content">
-			<div class="card card-login">
+			<div class="card card-login col-3 col-xl-2 col-xxl-1">
 				<form @submit.prevent="login">
 					<div class="card-header text-center">
 						<h3 class="card-title text-center">Login</h3>
 						<small class="text-center">
-							Log hier in met jouw privé e-mailadres<br />
+							Log hier in met jouw privé e-mailadres
+							<br />
 							<span class="fw-bold">Let op:</span> Dus niet met je
-							schoolaccount)
+							schoolaccount
 						</small>
 					</div>
 					<div class="card-body">
 						<div class="form-group">
-							<label>Emailadres</label>
+							<label class="mb-0">Emailadres</label>
 							<input
 								type="email"
 								placeholder="Vul email in"
@@ -23,7 +24,7 @@
 							/>
 						</div>
 						<div class="form-group">
-							<label>Wachtwoord</label>
+							<label class="mb-0">Wachtwoord</label>
 							<input
 								type="password"
 								placeholder="Vul wachtwoord in"
@@ -33,13 +34,9 @@
 						</div>
 					</div>
 					<div class="footer text-center">
-						<button type="submit" class="btn btn-fill btn-wd">
-							Let's go
-						</button>
+						<button type="submit" class="btn btn-fill btn-wd">Let's go</button>
 						<div class="forgot">
-							<router-link to="/forgotpassword"
-								>Wachtwoord vergeten?</router-link
-							>
+							<router-link to="/forgotpassword">Wachtwoord vergeten?</router-link>
 						</div>
 						<div class="register">
 							geen account?
@@ -122,6 +119,7 @@
 			padding-top: 25px;
 			padding-bottom: 25px;
 			min-width: 350px;
+			max-width: 500px;
 		}
 	}
 </style>
