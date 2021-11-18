@@ -154,6 +154,7 @@ body {
 	overflow-x: hidden;
 	// height: 100vh;
 	min-height: 100vh;
+	color: #66615b;
 }
 
 @media (max-width: 768px) {

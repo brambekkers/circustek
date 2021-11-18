@@ -6,10 +6,7 @@
 		<div class="card-body">
 			<table
 				class="table mx-0 table-striped border-top mb-0 table-hover border"
-				v-if="
-					material.reservations &&
-					Object.values(material.reservations).length
-				"
+				v-if="material.reservations && Object.values(material.reservations).length"
 			>
 				<thead class>
 					<tr>
@@ -18,7 +15,7 @@
 						<th>Hoeveelheid</th>
 						<th>Prijs</th>
 
-						<th class="text-center">Betaalt</th>
+						<th class="text-center">Betaald</th>
 						<th class="text-end pe-4">Acties</th>
 					</tr>
 				</thead>
@@ -38,10 +35,10 @@
 </template>
 
 <script>
-	import ReservationAdmin from "@/components/dashboard/reservations/ReservationAdmin.vue";
+import ReservationAdmin from "@/components/dashboard/reservations/ReservationAdmin.vue";
 
-	export default {
-		props: ["material"],
-		components: { ReservationAdmin },
-	};
+export default {
+	props: ["material"],
+	components: { ReservationAdmin },
+};
 </script>

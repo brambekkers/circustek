@@ -1,5 +1,9 @@
 <template>
-	<tr class="item" @click="toItem" v-if="material.unitAvalible > 0">
+	<router-link
+		class="item d-table-row"
+		:to="`${$route.fullPath}/${material.id}`"
+		v-if="material.unitAvalible > 0"
+	>
 		<td>
 			<MaterialThumbnail :images="material.images" :width="50" :height="50" />
 		</td>
@@ -12,7 +16,7 @@
 			€{{ material.price }}
 			<span class="d-none d-md-block"> per {{ material.priceUnit }}</span>
 		</td>
-	</tr>
+	</router-link>
 </template>
 
 <script>
@@ -32,8 +36,14 @@ export default {
 <style lang="scss" scoped>
 .item {
 	cursor: pointer;
+	text-decoration: none;
+	color: #66615b;
+	border-color: #ccc;
 	&:hover {
 		background: #f4f3ef;
+	}
+	&:nth-child(odd) {
+		background: #f2f2f2;
 	}
 }
 </style>
